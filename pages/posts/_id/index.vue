@@ -6,7 +6,7 @@
             <div class="post-detail">Last updated on XXX</div>
             <div class="post-detail">Written by NAME</div>
           </div>
-      <p class="post-content">Content of the post</p>
+        <p class="post-content">Content of the post</p>
       </section>
       <section class="post-feedback">Let me know what you think about the post, send a mail to <a href="mailto:feedback@domain.com">feedback@domain.com</a></section>
   </div>
