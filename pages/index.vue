@@ -41,7 +41,7 @@ export default {
   position: relative;
   padding: 30px;
   box-sizing: border-box;
-  /* background-image: url('../assets'); */
+  background-image: url('~assets/images/JcuPgit-cyberpunk-wallpaper.jpg');
   background-position: center;
   background-size: cover;
 }
