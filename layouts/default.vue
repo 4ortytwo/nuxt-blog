@@ -1,7 +1,10 @@
 <template>
   <div>
-    <TheHeader @isSideNavToggle="displaySideNav = !displaySideNav"/>
-    <TheSidenav />
+     <TheHeader @sidenavToggle="displaySideNav = !displaySideNav"/>
+    <TheSidenav
+    :show="displaySideNav"
+    @close="displaySideNav = false"
+    />
     <nuxt />
   </div>
 </template>

@@ -6,13 +6,13 @@
     <section class="featured-posts">
       <PostPreview
         id="1"
-        thumbnail="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwQeUDWcs60whCTdBsBm1IN1LL0w8ObwwPod55I2siEGWnXNT5FA&s"
+        :thumbnail="menImg"
         title="Hello there!"
         previewText="This is my first post"
       />
       <PostPreview
         id="2"
-        thumbnail="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwQeUDWcs60whCTdBsBm1IN1LL0w8ObwwPod55I2siEGWnXNT5FA&s"
+        :thumbnail="downloadImg"
         title="Hello there the Second time!"
         previewText="This is my second post"
       />
@@ -31,6 +31,12 @@ import PostPreview from '@/components/Posts/PostPreview'
 export default {
   components: {
     PostPreview
+  },
+  data() {
+    return {
+      menImg: require('@/assets/images/men.jpg'),
+      downloadImg: require('@/assets/images/downloadImg.jpeg')
+    }
   }
 }
 </script>

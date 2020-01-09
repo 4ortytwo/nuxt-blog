@@ -1,9 +1,9 @@
 <template>
   <nuxt-link :to="'/posts/' + id" class="post-preview">
-    <article>
+    <article class="article">
       <div
         class="post-thumbnail"
-        :style="{backgroundImage: 'url(' + thumbnail + ')'}"
+        :style="{ backgroundImage: `url('${thumbnail}')` }"
       >
         <div class="post-content">
           <h1>{{ title }}</h1>
@@ -39,6 +39,17 @@ export default {
 </script>
 
 <style scoped>
+/*.article {*/
+/*  width: 400px;*/
+/*  height: 200px;*/
+
+/*}*/
+
+/*.article:hover .post-thumbnail,*/
+/*.article:focus .post-thumbnail {*/
+/*  transform: scale(1.2);*/
+/*}*/
+
 .post-preview {
   border: 1px solid #ccc;
   box-shadow: 0 2px 2px #ccc;
@@ -63,6 +74,7 @@ a {
   height: 200px;
   background-position: center;
   background-size: cover;
+  transition: all 0.5s;
 }
 
 .post-content {
