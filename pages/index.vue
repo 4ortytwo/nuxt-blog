@@ -3,7 +3,7 @@
     <section class="intro">
       <h1>Work together!</h1>
     </section>
-      <PostList />
+    <PostList />
   </div>
 </template>
 
@@ -11,7 +11,7 @@
 import PostList from '../components/Posts/PostList'
 export default {
   components: {
-    PostList,
+    PostList
   }
 }
 </script>
