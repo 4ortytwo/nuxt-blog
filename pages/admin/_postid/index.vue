@@ -16,9 +16,9 @@ export default {
     return {
       menImg: require('@/assets/images/men.jpg'),
       loadedPost: {
-        author: "Arthur Burgan",
-        title: "My Magnificent Post",
-        content: "Great text of unrivalled complexity",
+        author: 'Arthur Burgan',
+        title: 'My Magnificent Post',
+        content: 'Great text of unrivalled complexity',
         thumbnailLink: this.menImg
       }
     }
@@ -27,5 +27,14 @@ export default {
 </script>
 
 <style scoped>
+.update-form {
+  width: 90%;
+  margin: 20px auto;
+}
 
+@media (min-width: 768px) {
+  .update-form {
+    width: 500px;
+  }
+}
 </style>
