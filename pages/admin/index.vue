@@ -1,19 +1,23 @@
 <template>
   <div class="admin-page">
     <section class="new-post">
-      <button @click="$router.push('/admin/new-post')">Create Post</button>
+      <AppButton @click="$router.push('/admin/new-post')"
+        >Create Post</AppButton
+      >
     </section>
     <section class="existing-post">
       <h1>Existing Posts</h1>
-      <PostList isAdmin/>
+      <PostList isAdmin />
     </section>
   </div>
 </template>
 
 <script>
+import AppButton from '@/components/UI/AppButton'
 import PostList from '@/components/Posts/PostList'
 export default {
-  components: { PostList }
+  layout: 'admin',
+  components: { AppButton, PostList }
 }
 </script>
 
