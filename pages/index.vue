@@ -3,16 +3,72 @@
     <section class="intro">
       <h1>Work together!</h1>
     </section>
-    <PostList />
+    <PostList :posts="loadedPosts" />
   </div>
 </template>
 
 <script>
 import PostList from '../components/Posts/PostList'
+import menImg from '@/assets/images/men.jpg'
 export default {
   components: {
     PostList
-  }
+  },
+  asyncData() {
+    setTimeout(() => {
+      return {
+        loadedPosts: [
+          {
+            id: '1',
+            title: 'First Post',
+            previewText: 'My first post',
+            thumbnail: menImg
+          },
+          {
+            id: '2',
+            title: 'Second Post',
+            previewText: 'My second post',
+            thumbnail: menImg
+          },
+          {
+            id: '3',
+            title: 'Third Post',
+            previewText: 'My third post',
+            thumbnail: menImg
+          }
+        ]
+      }
+    }, 1500)
+  },
+  // data() {
+  //   return {
+  //     loadedPosts: []
+  //   }
+  // },
+  // created() {
+  //   setTimeout(() => {
+  //     this.loadedPosts = [
+  //       {
+  //         id: '1',
+  //         title: 'First Post',
+  //         previewText: 'My first post',
+  //         thumbnail: menImg
+  //       },
+  //       {
+  //         id: '2',
+  //         title: 'Second Post',
+  //         previewText: 'My second post',
+  //         thumbnail: menImg
+  //       },
+  //       {
+  //         id: '3',
+  //         title: 'Third Post',
+  //         previewText: 'My third post',
+  //         thumbnail: menImg
+  //       }
+  //     ]
+  //   }, 1500)
+  // }
 }
 </script>
 
