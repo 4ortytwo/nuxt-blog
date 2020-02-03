@@ -10,13 +10,14 @@
 <script>
 import PostList from '../components/Posts/PostList'
 import menImg from '@/assets/images/men.jpg'
+
 export default {
   components: {
     PostList
   },
-  asyncData() {
+  asyncData(context, callback) {
     setTimeout(() => {
-      return {
+      callback(null, {
         loadedPosts: [
           {
             id: '1',
@@ -37,9 +38,9 @@ export default {
             thumbnail: menImg
           }
         ]
-      }
+      })
     }, 1500)
-  },
+  }
   // data() {
   //   return {
   //     loadedPosts: []
