@@ -15,31 +15,40 @@ export default {
   components: {
     PostList
   },
-  asyncData(context, callback) {
-    setTimeout(() => {
-      callback(null, {
-        loadedPosts: [
-          {
-            id: '1',
-            title: 'First Post',
-            previewText: 'My first post',
-            thumbnail: menImg
-          },
-          {
-            id: '2',
-            title: 'Second Post',
-            previewText: 'My second post',
-            thumbnail: menImg
-          },
-          {
-            id: '3',
-            title: 'Third Post',
-            previewText: 'My third post',
-            thumbnail: menImg
-          }
-        ]
-      })
-    }, 1500)
+  asyncData(context) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // console.log('context', context)
+        resolve( {
+          loadedPosts: [
+            {
+              id: '1',
+              title: 'First Post',
+              previewText: 'My first post',
+              thumbnail: menImg
+            },
+            {
+              id: '2',
+              title: 'Second Post',
+              previewText: 'My second post',
+              thumbnail: menImg
+            },
+            {
+              id: '3',
+              title: 'Third Post',
+              previewText: 'My third post',
+              thumbnail: menImg
+            }
+          ]
+        })
+        .then(data => {
+          return {data}
+        })
+      }, 1500)
+    }).catch(e => {
+      context.error(new Error())
+    })
+
   }
   // data() {
   //   return {
